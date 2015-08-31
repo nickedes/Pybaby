@@ -52,5 +52,25 @@ Python is
     >>> height = 5 * 9
     >>> width * height
     900
-
+    >>> n  # try to access an undefined variable
+    >>> # see error
+    >>> 
+    >>> # mixed type operands convert the integer operand to floating point:
+    >>> 3 * 3.75 / 1.5
+    7.5
+    >>> _
+    7.5
+    >>> # the last printed expression is assigned to the variable _.
+    >>> # Basic classes - Oop
+    >>> num = int()
+    >>> type(num)
+    <class 'int'>
+    >>> # The int() returns an integer object constructed from a number or 
+    >>> # string x, or return 0 if no arguments are given.
+    >>> int()
+    0
+    >>> num
+    0
+    >>> int(3)
+    3
     ```
