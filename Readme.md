@@ -74,3 +74,26 @@ Python is
     >>> int(3)
     3
     ```
+
+3. Strings
+
+    ```python
+    >>> 'spam eggs'  # single quotes
+    'spam eggs'
+    >>> 'doesn\'t'  # use \' to escape the single quote...
+    "doesn't"
+    >>> "doesn't"  # ...or use double quotes instead
+    "doesn't"
+    >>> '"Yes," he said.'
+    '"Yes," he said.'
+    >>> "\"Yes,\" he said."
+    '"Yes," he said.'
+    >>> '"Isn\'t," she said.'
+    '"Isn\'t," she said.'
+    >>> s = 'First line.\nSecond line.'  # \n means newline
+    >>> s  # without print(), \n is included in the output
+    'First line.\nSecond line.'
+    >>> print(s)  # with print(), \n produces a new line
+    First line.
+    Second line.
+    ```
