@@ -228,6 +228,7 @@ Python is
     >>> a = [66.25, 333, 333, 1, 1234.5]
     >>> print(a.count(333), a.count(66.25), a.count('x'))
     2 1 0
+    >>> # Insert an item at a given position. Below inserts at position 2
     >>> a.insert(2, -1)
     >>> a.append(333)
     >>> a
@@ -243,8 +244,29 @@ Python is
     >>> a.sort()
     >>> a
     [-1, 1, 66.25, 333, 333, 1234.5]
+    >>> # Pop - Removes the item at the given position in the list, and return 
+    >>> # it. If no index is specified, a.pop() removes and returns the last 
+    >>> # item in the list.
     >>> a.pop()
     1234.5
     >>> a
-    [-1, 1, 66.25, 333, 333] 
+    [-1, 1, 66.25, 333, 333]
+
+    ```
+
+5. Control flow
+    ```python
+    >>> x = int(input("Please enter an integer: "))
+    Please enter an integer: 42
+    >>> if x < 0:
+    ...     x = 0
+    ...     print('Negative changed to zero')
+    ... elif x == 0:
+    ...     print('Zero')
+    ... elif x == 1:
+    ...     print('Single')
+    ... else:
+    ...     print('More')
+    ...
+    More
     ```
