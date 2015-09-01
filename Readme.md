@@ -132,4 +132,28 @@ Python is
     'o'
     >>> word[-6]
     'P'
+    >>> # Note that since -0 is the same as 0, negative indices start from -1.
+    >>> # slicing allows you to obtain substring.
+    >>> word[0:2]  # characters from position 0 (included) to 2 (excluded)
+    'Py'
+    >>> word[2:5]  # characters from position 2 (included) to 5 (excluded)
+    'tho'
+    >>> word[:2] + word[2:]
+    'Python'
+    >>> word[:4] + word[4:]
+    'Python'
+    >>> word[:2]  # character from the beginning to position 2 (excluded)
+    'Py'
+    >>> word[4:]  # characters from position 4 (included) to the end
+    'on'
+    >>> word[-2:] # characters from the second-last (included) to the end
+    'on'
+    >>> # Python strings cannot be changed — they are immutable.
+    >>> word[0] = 'J'
+    >>> # gives error
+    >>> # If you need a different string, you should create a new one:
+    >>> 'J' + word[1:]
+    'Jython'
+    >>> word[:2] + 'py'
+    'Pypy'
     ```
