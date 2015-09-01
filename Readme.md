@@ -162,7 +162,9 @@ Python is
     >>> len(s)
     34
     ```
+
 4. Lists
+
     ```python
     >>> squares = [1, 4, 9, 16, 25]
     >>> squares
@@ -255,6 +257,7 @@ Python is
     ```
 
 5. Control flow
+
     ```python
     >>> x = int(input("Please enter an integer: "))
     Please enter an integer: 42
@@ -269,4 +272,20 @@ Python is
     ...     print('More')
     ...
     More
+    ```
+
+6. Defining Functions
+
+    ```python
+    >>> def fib(n):    # write Fibonacci series up to n
+    ...     """Print a Fibonacci series up to n."""
+    ...     a, b = 0, 1
+    ...     while a < n:
+    ...         print(a, end=' ')
+    ...         a, b = b, a+b
+    ...     print()
+    ...
+    >>> # Now call the function we just defined:
+    ... fib(2000)
+    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
     ```
