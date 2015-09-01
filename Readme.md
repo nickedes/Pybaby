@@ -96,4 +96,40 @@ Python is
     >>> print(s)  # with print(), \n produces a new line
     First line.
     Second line.
+    >>> # Strings can be concatenated (glued together) with the + operator,
+    >>> # and repeated with *
+    >>> # 3 times 'un', followed by 'ium'
+    >>> 3 * 'un' + 'ium'
+    'unununium'
+    >>> # try
+    >>> 2 * 'one' + 3 * 'two'
+    'oneonetwotwotwo'
+    >>> # Two or more string literals next to each other are automatically 
+    >>> # concatenated.
+    >>> 'Py' 'thon'
+    'Python'
+    >>> # If you want to concatenate variables or a variable and a literal, 
+    >>> # use +
+    >>> prefix = 'Py'
+    >>> prefix + 'thon'
+    'Python'
+    >>> # Put several strings within parentheses to have them joined together.
+    >>> num = ('one''two''three')
+    >>> num
+    'onetwothree'
+    >>> # Strings can be indexed (subscripted), with the first character
+    >>> # having index 0
+    >>> word = 'Python'
+    >>> word[0]  # character in position 0
+    'P'
+    >>> word[5]  # character in position 5
+    'n'
+    >>> # Indices may also be negative numbers, to start counting from the
+    >>> # right
+    >>> word[-1]  # last character
+    'n'
+    >>> word[-2]  # second-last character
+    'o'
+    >>> word[-6]
+    'P'
     ```
