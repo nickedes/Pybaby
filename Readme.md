@@ -1,3 +1,4 @@
+*Live and Learn and Pass It On.*
 # Pybaby
 These babies want to learn Python
 
@@ -156,4 +157,35 @@ Python is
     'Jython'
     >>> word[:2] + 'py'
     'Pypy'
+    >>> s = 'supercalifragilisticexpialidocious'
+    >>> # String length
+    >>> len(s)
+    34
+    ```
+4. Lists
+    ```python
+    >>> squares = [1, 4, 9, 16, 25]
+    >>> squares
+    [1, 4, 9, 16, 25]
+    >>> squares[0]  # indexing returns the item
+    1
+    >>> squares[-1]
+    25
+    >>> squares[-3:]  # slicing returns a new list
+    [9, 16, 25]
+    >>> # All slice operations return a new list containing the requested 
+    >>> # elements. This means that the following slice returns a new (
+    >>> # shallow) copy of the list:
+    >>> squares[:]
+    [1, 4, 9, 16, 25]
+    >>> # Lists also support operations like concatenation:
+    >>> squares + [36, 49, 64, 81, 100]
+    [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    >>> # Unlike strings, which are immutable, lists are a mutable type
+    >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here
+    >>> 4 ** 3  # the cube of 4 is 64, not 65!
+    64
+    >>> cubes[3] = 64  # replace the wrong value
+    >>> cubes
+    [1, 8, 27, 64, 125]
     ```
