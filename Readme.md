@@ -188,4 +188,42 @@ Python is
     >>> cubes[3] = 64  # replace the wrong value
     >>> cubes
     [1, 8, 27, 64, 125]
+    >>> # Add to lists
+    >>> cubes.append(7 ** 3)  # and the cube of 7
+    >>> # Assignment to slices is also possible, and this can even change the
+    >>> # size of the list or clear it entirely
+    >>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    >>> letters
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    >>> # replace some values
+    >>> letters[2:5] = ['C', 'D', 'E']
+    >>> letters
+    ['a', 'b', 'C', 'D', 'E', 'f', 'g']
+    >>> # Length of lists -- no. of elements in the list.
+    >>> len(letters)
+    7
+    >>> # now remove them
+    >>> letters[2:5] = []
+    >>> letters
+    ['a', 'b', 'f', 'g']
+    >>> # clear the list by replacing all the elements with an empty list
+    >>> letters[:] = []
+    >>> letters
+    []
+    >>> # It is possible to nest lists.
+    >>> a = ['a', 'b', 'c']
+    >>> n = [1, 2, 3]
+    >>> x = [a, n]
+    >>> x
+    [['a', 'b', 'c'], [1, 2, 3]]
+    >>> x[0]
+    ['a', 'b', 'c']
+    >>> x[0][1]
+    'b'
+    >>> # Swap
+    >>> a,b = 1,2
+    >>> a, b = b, a
+    >>> a, b
+    (2, 1)
+    >>> 
     ```
