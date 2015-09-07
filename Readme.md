@@ -256,7 +256,55 @@ Python is
 
     ```
 
-5. Control flow
+5. Dicts
+
+    ```python
+    # Initializing
+    >>> first = dict()
+    >>> first
+    {}
+    >>> type(x)
+    <class 'dict'>
+    >>> # initialize dict
+    >>> tel = {'jack': 4098, 'sape': 4139}
+    >>> # add a key-value pair
+    >>> tel['guido'] = 4127
+     >>> # display all key-values
+    >>> tel
+    {'sape': 4139, 'guido': 4127, 'jack': 4098}
+    >>> # Value corresponding to a key in dict
+    >>> tel['jack']
+    4098
+    >>> # Remove a key 
+    >>> del tel['sape']
+    >>> tel['irv'] = 4127
+    >>> tel
+    {'guido': 4127, 'irv': 4127, 'jack': 4098}
+    >>> # to be discussed later.
+    >>> list(tel.keys())
+    ['irv', 'guido', 'jack']
+    >>> sorted(tel.keys())
+    ['guido', 'irv', 'jack']
+    >>> 'guido' in tel
+    True
+    >>> 'jack' not in tel
+    False
+    >>> # another way of init
+    >>> # The dict() constructor builds dictionaries directly from sequences 
+    >>> # of key-value pairs:
+    >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+    {'sape': 4139, 'jack': 4098, 'guido': 4127}
+    >>> # dict comprehensions can be used to create dictionaries from 
+    >>> # arbitrary key and value expressions:
+    >>> {x: x**2 for x in (2, 4, 6)}
+    {2: 4, 4: 16, 6: 36}
+    >>> # When the keys are simple strings, it is sometimes easier to specify 
+    >>> # pairs using keyword arguments:
+    >>> dict(sape=4139, guido=4127, jack=4098)
+    {'sape': 4139, 'jack': 4098, 'guido': 4127}
+    ```
+
+6. Control flow
 
     ```python
     >>> x = int(input("Please enter an integer: "))
@@ -274,7 +322,7 @@ Python is
     More
     ```
 
-6. Defining Functions
+7. Defining Functions
 
     ```python
     >>> def fib(n):    # write Fibonacci series up to n
