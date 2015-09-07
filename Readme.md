@@ -340,7 +340,6 @@ Python is
     0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
     ```
 
-
 8. Sets
     A set is an unordered collection with no duplicate elements. To create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary.
 
@@ -352,4 +351,45 @@ Python is
     True
     >>> 'crabgrass' in basket
     False
+    >>> a = set('abracadabra')
+    >>> b = set('alacazam')
+    >>> a                                  # unique letters in a
+    {'a', 'r', 'b', 'c', 'd'}
+    >>> b
+    
+    >>> a - b                              # letters in a but not in b
+    {'r', 'd', 'b'}
+    >>> a | b                              # letters in either a or b
+    {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+    >>> a & b                              # letters in both a and b
+    {'a', 'c'}
+    >>> # Similarly to list comprehensions, set comprehensions are also 
+    >>> # supported:
+    >>> a = {x for x in 'abracadabra' if x not in 'abc'}
+    >>> a
+    {'r', 'd'}
     ```
+
+9. Tuples 
+    A tuple consists of a number of values separated by commas
+
+```python
+    >>> t = 12345, 54321, 'hello!'
+    >>> t[0]
+    12345
+    >>> t
+    (12345, 54321, 'hello!')
+    >>> # Tuples may be nested:
+    ... u = t, (1, 2, 3, 4, 5)
+    >>> u
+    ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+    >>> # Tuples are immutable:
+    ... t[0] = 88888
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: 'tuple' object does not support item assignment
+    >>> # but they can contain mutable objects:
+    ... v = ([1, 2, 3], [3, 2, 1])
+    >>> v
+    ([1, 2, 3], [3, 2, 1])
+```
