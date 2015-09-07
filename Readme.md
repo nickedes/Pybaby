@@ -257,6 +257,8 @@ Python is
     ```
 
 5. Dicts
+    Dictionary as an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary).
+
 
     ```python
     # Initializing
@@ -336,4 +338,18 @@ Python is
     >>> # Now call the function we just defined:
     ... fib(2000)
     0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+    ```
+
+
+8. Sets
+    A set is an unordered collection with no duplicate elements. To create an empty set you have to use `set()`, not `{}`; the latter creates an empty dictionary.
+
+    ```python
+    >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+    >>> print(basket)                      # show that duplicates have been removed
+    {'orange', 'banana', 'pear', 'apple'}
+    >>> 'orange' in basket                 # fast membership testing
+    True
+    >>> 'crabgrass' in basket
+    False
     ```
