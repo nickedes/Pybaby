@@ -373,7 +373,7 @@ Python is
 9. Tuples 
     A tuple consists of a number of values separated by commas
 
-```python
+    ```python
     >>> t = 12345, 54321, 'hello!'
     >>> t[0]
     12345
@@ -392,4 +392,26 @@ Python is
     ... v = ([1, 2, 3], [3, 2, 1])
     >>> v
     ([1, 2, 3], [3, 2, 1])
-```
+    >>> empty = ()  # empty tuple
+    >>> singleton = 'hello',  # <-- note trailing comma
+    >>> len(empty)
+    0
+    >>> len(singleton)
+    1
+    >>> singleton
+    ('hello',)
+    >>> # sequence/tuple unpacking
+    >>> x, y, z = t 
+    ```
+
+10. Looping 
+    
+    ```python
+    >>> # Loop thru Dict
+    >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+    >>> for k, v in knights.items():
+    ...     print(k, v)
+    ...
+    gallahad the pure
+    robin the brave
+    ```
