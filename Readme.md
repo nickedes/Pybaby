@@ -74,6 +74,17 @@ Python is
     0
     >>> int(3)
     3
+    >>> char = str()
+    >>> char
+    ''
+    >>> type(char)
+    <class 'str'>
+    >>> str()
+    ''
+    >>> str(2)
+    '2'
+    >>> str(234)
+    '234'
     ```
 
 3. Strings
