@@ -432,3 +432,55 @@ Python is
     ...         print(x) 
     ...
     ```
+    
+    
+11. Reading & writing Data
+
+    ```
+    >>> f = open('workfile', 'w') #r, w, a, rb, wb, ab,
+    >>> f.read()
+    'This is the entire file.\n'
+    >>> f.read()
+    ''
+    >>> f.readline() # reading lines
+    'This is the first line of the file.\n'
+    >>> f.readline()
+    'Second line of the file\n'
+    >>> f.readline()
+    ''
+    >>> for line in f:
+    ...     print(line, end='')
+    ...
+    This is the first line of the file.
+    Second line of the file
+    >>> f.write('This is a test\n')
+    15
+    >>> value = ('the answer', 42)
+    >>> s = str(value)
+    >>> f.write(s)
+    18
+    >>> f = open('workfile', 'rb+') #file positions
+    >>> f.write(b'0123456789abcdef')
+    16
+    >>> f.seek(5)     # Go to the 6th byte in the file
+    5
+    >>> f.read(1)
+    b'5'
+    >>> f.seek(-3, 2) # Go to the 3rd byte before the end
+    13
+    >>> f.read(1)
+    b'd'
+    >>> f.close() #close
+    >>> f.read()
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in ?
+    ValueError: I/O operation on closed file
+    >>> with open('workfile', 'r') as f:
+    ...     read_data = f.read()
+    >>> f.closed
+    True
+    >>> json.dumps([1, 'simple', 'list'])
+    '[1, "simple", "list"]'
+    json.dump(x, f)
+    x = json.load(f)
+    ```
