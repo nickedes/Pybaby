@@ -436,7 +436,7 @@ Python is
     
 11. Reading & writing Data
 
-    ```
+    ```python
     >>> f = open('workfile', 'w') #r, w, a, rb, wb, ab,
     >>> f.read()
     'This is the entire file.\n'
