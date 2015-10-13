@@ -270,6 +270,8 @@ Python is
 5. Dicts
     Dictionary as an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary).
 
+    Dictionaries are indexed by keys, which can be any `immutable` type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
+
 
     ```python
     # Initializing
@@ -606,3 +608,6 @@ Python is
     >>> parrot(**d)
     "-- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !"
     ```
+
+14. Zip
+15. More on conditions
