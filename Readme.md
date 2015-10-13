@@ -403,6 +403,11 @@ Python is
     ... v = ([1, 2, 3], [3, 2, 1])
     >>> v
     ([1, 2, 3], [3, 2, 1])
+    ```
+
+    Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples are immutable, and usually contain an heterogeneous sequence of elements that are accessed via unpacking or indexing. Lists are mutable, and their elements are usually homogeneous and are accessed by iterating over the list.
+
+    ```python
     >>> empty = ()  # empty tuple
     >>> singleton = 'hello',  # <-- note trailing comma
     >>> len(empty)
@@ -412,8 +417,11 @@ Python is
     >>> singleton
     ('hello',)
     >>> # sequence/tuple unpacking
+    >>> t = 12345, 54321, 'hello!'
     >>> x, y, z = t 
     ```
+
+    This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
 
 10. Looping 
     
