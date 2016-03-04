@@ -86,6 +86,15 @@ Python is
     >>> str(234)
     '234'
     ```
+    Note: Python 2.7 uses integer divison by default (3/2=1), one needs to import the following to use float divison as default.
+    ```python
+    >>> from __future__ import divison
+    >>> 3/2
+    1.5
+    >>> 3//2
+    1
+    ```
+    
 
 3. Strings
 
@@ -194,6 +203,9 @@ Python is
     >>> # Lists also support operations like concatenation:
     >>> squares + [36, 49, 64, 81, 100]
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    >>> # Instead of modifying the original list you can also do
+    >>> new_squares=squares+[121,144,169]
+    >>> #Does not modify squares.
     >>> # Unlike strings, which are immutable, lists are a mutable type
     >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here
     >>> 4 ** 3  # the cube of 4 is 64, not 65!
@@ -246,6 +258,11 @@ Python is
     >>> a.append(333)
     >>> a
     [66.25, 333, -1, 333, 1, 1234.5, 333]
+     >>> #Extending a list is easy.
+    >>>a=[1,2,3]
+    >>>a.extend([4,5,6])
+    >>>a
+    [1, 2, 3, 4, 5, 6]
     >>> a.index(333)
     1
     >>> a.remove(333)
@@ -264,7 +281,11 @@ Python is
     1234.5
     >>> a
     [-1, 1, 66.25, 333, 333]
-
+    >>> #You can also check for list membership using in keyword
+    >>> 1 in a
+    True
+    >>> 15 in a
+    False
     ```
 
 5. Dicts
@@ -423,7 +444,8 @@ Python is
     >>> x, y, z = t 
     ```
 
-    This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
+    This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking. 
+    Apart from being used for multiple assignments, tuples are provide an easy way to return multiple values from a function.
 
 10. Looping 
     
@@ -608,6 +630,25 @@ Python is
     >>> parrot(**d)
     "-- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !"
     ```
+14. Counters
+    Sometimes we need to count the number of occurances of various elements in a collection. With introduction of   collections.Counter(2.7 and above), this is now a child's play.
 
-14. Zip
-15. More on conditions
+    ```python
+    >>> from collections import Counter
+    >>> c=Counter([0,0,1,2,0,5])
+    >>> c
+    Counter({0: 3, 1: 1, 2: 1, 5: 1})
+    >>> # Zero occurs thrice, and rest of them once. By Default, the counters are set to zero.
+    ```
+15. The None Value
+     Python uses a quircky keyword to indicate a nonexistent value. None in Python is similar to null in other languages.
+
+    ```python
+    >>> q=None
+    >>>q
+    >>>
+    >>> #Nothig will be returned. REMEMBER None is NOT a value, even though the following return true.
+    >>> q==None
+    True
+    >>> q is None # A better Pythonic convention than ==
+    True
