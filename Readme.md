@@ -688,7 +688,7 @@ Python is
 17. Conditions   
 
        Conditional statements in Python are are similar to that of ither languages.   
-```python
+    ```python
     >>> var=12
     >>> if var==12:
     ...  print (12)
@@ -718,8 +718,8 @@ Python is
     3
     5
     7
-```
-18.Random Numbers
+    ```
+18. Random Numbers
 
     ```python
     >>> import random
@@ -742,4 +742,26 @@ Python is
     b
     a
     c
-   ```
+    ```
+
+19.  \*args and \*\*kwargs
+
+    We can use \*args or \*\*kwargs when we are not sure of the number of arguments that will be passed to the functions. While \*args is used for variable non-keyword element, \*\*kwargs are used for varible length keyworded arguments.(i.e arguments of the key-value pair form.)
+    ``` python
+    >>> def f1(a,*args):
+    ...  print ("formal argument=",a)
+    ...  print ("Non key worded=",args)
+    ... 
+    >>> f1(1,2,3,4)
+    formal argument= 1
+    Non key woreded= (2, 3, 4)
+    >>> def f2(*args,**kwargs)
+    ...    print("Non Key worded=",args)
+    ...    print("Varible length args with key-value=",kwargs)
+    ...
+    >>> f2(1,2,c=3,d='q')
+    Non keyworded=(1,2)
+    Variable length args with key-value={'c':3, 'd':'q'}
+    >>># The order of agrguments is formal-variable agruments-keyword arguments
+    ``` 
+
