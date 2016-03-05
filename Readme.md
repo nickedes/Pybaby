@@ -652,3 +652,94 @@ Python is
     True
     >>> q is None # A better Pythonic convention than ==
     True
+    ```
+16. Zip
+
+    Zip takes in 2 lists, and returns a list of tuples. Each i-th element of the tuple contains the i-th element from  respective lists. The returned list is truncated in length to the length of the shortest argument sequence.
+
+   ```python
+   >>> a=[1,2,3]
+   >>> b=[4,5]
+   >>># In Python 3 to read the elements use the following syntax
+   >>>zipped=list(zip(a,b))
+   >>>zipped
+   >>> [(1, 4), (2, 5)]
+   >>>#For unpacking
+   >>> a,b,*c=[1,2,3,4,5,6,7]
+   >>> a
+   1
+   >>> b
+   2
+   >>> c # c stores rest of the elements.
+   [3, 4, 5, 6, 7]
+   >>> a=[1,2,3,4]
+   >>> b=[x*x for x in a]
+   >>>for (a,b) in zip(a,b):
+   ...  print(a,b)
+   ...
+   1 1
+   2 4
+   3 9
+   >>> #One can use the zipped techniques for argument packing.
+   >>> c=list(range(4,7)) # range takes 2 aruguments, and returns a list 4,5,6 assigned to c
+   >>> args=[4,7]
+   >>> c=list(range(*args)) # Same as above.
+   ```
+17. Conditions   
+
+       Conditional statements in Python are are similar to that of ither languages.   
+```python
+    >>> var=12
+    >>> if var==12:
+    ...  print (12)
+    ... else:
+    ...  print(13)
+    ... 
+    12
+    >>> user='c'
+    >>> if user =='y':
+    ...  print ("Yes")
+    ... elif user=='n':
+    ...  print("No")
+    ... else:
+    ...  print("Can't Say")
+    ... 
+    Can't Say
+    >>> for i in [3,5,6,7]:
+    ...     if i%2==0:
+    ...           break ## comes out of the loop at the first even number
+    ...     print(i)
+    3
+    5
+    >>> for i in [3,4,6,7]:
+    ...     if i%2==0:
+    ...         continue ## move to the next iteration if even number is encountered.
+    ...     print (i)
+    3
+    5
+    7
+```
+18.Random Numbers
+
+    ```python
+    >>> import random
+    >>> random.random() #generate a random number between 0-1
+    0.7688075911155139
+    >>> random.uniform(1,3) # generate a random number between the range 1-3
+    1.3172662652831486
+    >>> random.randint(1,3) #same as above but returns only an integer value 
+    2
+    >>> random.randrange(0, 10, 2) #generates only even numbers
+    4
+    >>> vowels=['a','e','i','o','u']
+    >>>random.choice(vowles) # select randomly from a list
+    e
+    >>> for _ in range(5):
+    ...  print(random.choice(foo))
+    ... 
+    c
+    b
+    b
+    a
+    c
+   ```
