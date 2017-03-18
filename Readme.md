@@ -338,6 +338,11 @@ Python is
     >>> # pairs using keyword arguments:
     >>> dict(sape=4139, guido=4127, jack=4098)
     {'sape': 4139, 'jack': 4098, 'guido': 4127}
+    >>> x = dict(sape=4139, guido=4127, jack=4098)
+    >>> # List of all values of dict
+    >>> list(x.values())
+    [4127, 4098, 4139]
+    >>>
     ```
 
 6. Control flow
