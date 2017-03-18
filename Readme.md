@@ -342,6 +342,9 @@ Python is
     >>> # List of all values of dict
     >>> list(x.values())
     [4127, 4098, 4139]
+    >>> # List of tuples of a dictionary's key-value pairs
+    >>> list(x.items())
+    [('sape', 4139), ('jack', 4098), ('guido', 4127)]
     >>>
     ```
 
